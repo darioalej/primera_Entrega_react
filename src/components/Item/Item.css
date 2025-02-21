@@ -1,43 +1,44 @@
 .card-producto {
-    background-color: aqua;
+    background-color: grey;
     border-radius: 10px;
-    width: 12rem; 
+    width: 14rem; 
     padding: 1rem;
     margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    text-align: center; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s ease-in-out; 
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .card-producto:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-producto img {
-    width: 100px; 
+    width: 120px; 
     height: auto;
-    margin-bottom: 10px; 
-    border-radius: 5px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .card-producto h3 {
-    font-size: 16px;
-    color: #333; 
-    margin-bottom: 5px; 
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 5px;
 }
 
 .card-producto p {
     font-size: 14px;
-    color: #555;
-    margin: 5px 0; 
+    color: #666;
+    margin: 5px 0;
 }
 
 .btn {
-    background-color: grey;
-    color: aquamarine;
+    background-color: #007bff;
+    color: white;
     border-radius: 10px;
     border: none;
     padding: 10px 20px;
@@ -47,6 +48,5 @@
 }
 
 .btn:hover {
-    background-color: #333; 
-    color: white; 
+    background-color: #0056b3;
 }

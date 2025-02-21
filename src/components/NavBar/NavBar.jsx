@@ -1,49 +1,91 @@
-import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ scrollToFooter }) => {
+  const [menuAbierto, setMenuAbierto] = useState(null);
+
   return (
-    <header> 
-            <div className="logo-container">
-                    <img src="/barney.png" alt="Logo de Barney" className="logo" />
-                <Link to='/'>
-                    <span>Drinks Barney</span>
-                </Link> 
-            </div>
-        
-        <nav>
-            <ul>
-                <li> 
-                    <NavLink to="categoria/1"> Vinos </NavLink>
-                </li>
-                <li>
-                    <NavLink to="categoria/2"> Cervezas </NavLink>
-                </li>
-                <li> 
-                    <NavLink to="categoria/3"> Espirituosas </NavLink>
-                </li>
-                <li> 
-                    <NavLink to="categoria/4"> Espumantes </NavLink>
-                </li>
-                <li> 
-                    <NavLink to="categoria/Estuchería"> Estuchería </NavLink>
-                </li>
-                <li> 
-                    <NavLink to="categoria/Bodegas"> Bodegas </NavLink> 
-                </li>
-                <li> 
-                    <NavLink to="categoria/Ofertas"> Ofertas </NavLink>
-                </li>
+    <nav>
+      <ul>
+        {/* Categoría Vinos, no tocar  */}
+        <li 
+          className="dropdown" 
+          onMouseEnter={() => setMenuAbierto("vinos")} 
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <NavLink to="#">Vinos</NavLink>
+          {menuAbierto === "vinos" && (
+            <ul className="submenu">
+              <li><NavLink to="/category/vinos/blanco">Blanco</NavLink></li>
+              <li><NavLink to="/category/vinos/tinto">Tinto</NavLink></li>
+              <li><NavLink to="/category/vinos/rosado">Rosado</NavLink></li>
+              <li><NavLink to="/category/vinos/dulce">Dulce</NavLink></li>
             </ul>
-        </nav>
-        <div className="auth-cart-container">
-            <button className="auth-button">Ingresar/Registrarme</button>
-            <CartWidget />
-        </div>
-        
-    </header>
-  )
-}
+          )}
+        </li>
 
-export default NavBar
+        {/* Cervezas, no tocarrrrr */}
+        <li 
+          className="dropdown" 
+          onMouseEnter={() => setMenuAbierto("cervezas")} 
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <NavLink to="#">Cervezas</NavLink>
+          {menuAbierto === "cervezas" && (
+            <ul className="submenu">
+              <li><NavLink to="/category/cervezas/negra">Negra</NavLink></li>
+              <li><NavLink to="/category/cervezas/roja">Roja</NavLink></li>
+              <li><NavLink to="/category/cervezas/rubia">Rubia</NavLink></li>
+            </ul>
+          )}
+        </li>
+
+        {/* Espirituosas si tocarrrrrr */}
+        <li 
+          className="dropdown" 
+          onMouseEnter={() => setMenuAbierto("espirituosas")} 
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <NavLink to="#">Espirituosas</NavLink>
+          {menuAbierto === "espirituosas" && (
+            <ul className="submenu">
+              <li><NavLink to="/category/espirituosas/aperitivos">Aperitivos</NavLink></li>
+              <li><NavLink to="/category/espirituosas/licores">Licores</NavLink></li>
+            </ul>
+          )}
+        </li>
+
+        {/* Espumantes */}
+        <li 
+          className="dropdown" 
+          onMouseEnter={() => setMenuAbierto("espumantes")} 
+          onMouseLeave={() => setMenuAbierto(null)}
+        >
+          <NavLink to="#">Espumantes</NavLink>
+          {menuAbierto === "espumantes" && (
+            <ul className="submenu">
+              <li><NavLink to="/category/espumantes/brut">Brut</NavLink></li>
+              <li><NavLink to="/category/espumantes/brut-nature">Brut Nature</NavLink></li>
+              <li><NavLink to="/category/espumantes/demi-sec">Demi Sec</NavLink></li>
+              <li><NavLink to="/category/espumantes/extra-brut">Extra Brut</NavLink></li>
+              <li><NavLink to="/category/espumantes/nature">Nature</NavLink></li>
+              <li><NavLink to="/category/espumantes/rose">Rosé</NavLink></li>
+            </ul>
+          )}
+        </li>
+
+        {/* Nuestro Local (Scroll al Footer cuando clickean para que lo lleve abajo) */}
+        <li>
+          <button onClick={scrollToFooter}>Nuestros Locales</button>
+        </li>
+
+        {/* Otras categorías */}
+        <li><NavLink to="/category/bodegas">Bodegas</NavLink></li>
+        <li><NavLink to="/category/ofertas">Ofertas</NavLink></li>
+      </ul>
+    </nav>
+  );
+};
+
+export default NavBar;

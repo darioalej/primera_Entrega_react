@@ -1,0 +1,37 @@
+.cervezas-container {
+    background-color: #f5deb3; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor de productos este tengo que modificar para todo */
+.container-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.producto-card {
+    width: 180px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: calc(12.5% - 10px);
+}
+
+@media (max-width: 1200px) {
+    .producto-card { flex-basis: calc(16.66% - 10px); }
+}
+
+@media (max-width: 900px) {
+    .producto-card { flex-basis: calc(25% - 10px); }
+}
+
+@media (max-width: 600px) {
+    .producto-card { flex-basis: calc(50% - 10px); }
+}

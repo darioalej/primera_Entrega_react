@@ -1,0 +1,153 @@
+ 
+  .slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: aqua;
+  }
+  
+  .slide-content h3 {
+    position: relative;
+    z-index: 2;
+    color: grey;
+    font-size: 18px !important;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .swiper {
+    width: 1000px;
+    height: 650px;
+  }
+
+  .swiper-slide {
+    width: 1000px !important;
+    height: 550px;
+    text-align: center;
+    font-size: 12px;
+    background: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 900px;
+    height: 550px;
+    object-fit: cover;
+    /*border-radius: 50px !important;
+    margin-bottom: 10px;*/
+  }
+  
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+
+  /* Fondo para todo el contenedor */
+.container-productos {
+  background-color:  #f0dbdbd2;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilos para cada producto */
+.producto {
+  background-color: rgb(224, 212, 212); /* Fondo blanco para las cards */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra */
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen dentro de la card */
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Títulos de los productos */
+.producto h3 {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Precio */
+.producto p {
+  font-size: 1em;
+  font-weight: bold;
+  color: #e44d26; /* Un color llamativo */
+}
+
+
+
+.swiper-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.titulo {
+  font-size: 30px;
+  color:#777;
+  margin-bottom: 15px;
+}
+
+.aviso {
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
+  text-align: center;
+}

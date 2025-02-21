@@ -1,6 +1,5 @@
-
-.container-productos {
-  background-color: #f5f5f5;
+/* .container-productos {
+  background-color: #f5f;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -20,3 +19,51 @@ h2 {
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+*/
+.container-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.producto {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.producto p {
+  font-size: 14px;
+  color: #777;
+}
+
+.producto p strong {
+  color: #b12704;
+}
+

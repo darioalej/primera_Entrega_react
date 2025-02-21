@@ -1,103 +1,82 @@
+nav {
+  height: 160px;
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: beige;
-    border-bottom: 10px solid grey;
-    padding: 10px 40px;
-    box-sizing: border-box; 
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 80px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .logo-container span {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    position: relative;
-    text-align: center;
-    padding-bottom: 5px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
-    .logo-container span::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #20b2aa;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-  }
-  
-  .logo-container span:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .logo-container span:hover {
-    color: #20b2aa;
-    transform: scale(1.1);
-  }
+nav li {
+  flex: 1; 
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 20px 30px;
+  background-color: #20b2aa;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav li {
-    font-size: 1.1rem;
-    color: #222;
-    margin: 0 10px;
-    padding: 10px 15px;
-    background-color: aqua;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  nav li:hover {
-    background-color: #20b2aa;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .CartWidget {
-    margin-left: auto; 
-  }
-  
-    .auth-cart-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .auth-button {
-    padding: 8px 15px;
-    font-size: 1rem;
-    background-color: #20b2aa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .auth-button:hover {
-    background-color: #008b8b; 
-  }
+nav li a, nav li button {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  row-gap: 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+  z-index: 10;
+}
+
+.submenu li {
+  padding: 12px 20px;
+  background-color: #e0e0e0;
+  color:whitesmoke;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li:hover {
+  background-color: salmon !important;
+  color: white;
+}
+
+.submenu li a {
+  color: whitesmoke;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
+nav li:hover {
+  background-color: #cbcece;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}

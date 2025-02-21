@@ -1,0 +1,161 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #f0dbdbd2;
+    border-bottom: 10px solid grey;
+    padding: 10px 40px;
+    box-sizing: border-box; 
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container a {
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+  }
+  
+
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .logo-container span {
+    display: flex;
+    align-items: center;
+    align-items: 100%;
+    
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+    .logo-container span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: grey;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .logo-container span:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .logo-container span:hover {
+    color: salmon;
+    transform: scale(1.1);
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    font-size: 1.1rem;
+    color: #222;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: grey !important;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  nav li:hover {
+    background-color: grey;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .CartWidget {
+    margin-left: auto; 
+  }
+  
+  .auth-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+  
+  .auth-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    background-color: salmon; 
+  }
+
+                             /* CSS DEL CONTENEDOR IZQUIERDO DE REDES SOCIALES */
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .social-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .phone-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .email {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .search-bar {
+    width: 200px;
+    padding: 5px;
+    border: 2px solid #20b2aa;
+    border-radius: 5px;
+    outline: none;
+  }
+  

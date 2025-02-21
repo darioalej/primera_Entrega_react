@@ -1,0 +1,59 @@
+.vinos-container {
+    background-color: beige !important;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 1440px; /* Máximo ancho para limitar a 8 cards por fila */
+    margin: 0 auto;
+}
+
+.producto-card {
+    width: 180px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-basis: calc(12.5% - 10px); 
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto-card h3 {
+    font-size: 16px; 
+    margin: 5px 0;
+}
+
+.producto-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+    .producto-card {
+        flex-basis: calc(16.66% - 10px); /* 6 por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 900px) {
+    .producto-card {
+        flex-basis: calc(25% - 10px);
+    }
+}
+
+/* Responsividad para celulares */
+@media (max-width: 600px) {
+    .producto-card {
+        flex-basis: calc(50% - 10px); /* 2 por fila en móviles */
+    }
+}

@@ -1,0 +1,9 @@
+.container-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+}
